@@ -575,11 +575,12 @@ h5{
 }
 .social_section{
 	width: 100%;
-	height: 450px;
+	height: 100%;
 }
 .sec_social{
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 }
 .sec_facebook{
 border: 1px solid #444;
