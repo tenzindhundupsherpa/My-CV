@@ -5,6 +5,8 @@
 }
 body{
 	background: linear-gradient(to bottom,#b2c2c3,#ccc);
+	background:-webkit-linear-gradient(to bottom,#b2c2c3,#ccc);/*Safari & chrome*/
+	background:-moz-linear-gradient(to bottom,#b2c2c3,#ccc);/*Mozilla*/
 	color:#223;
 }
 header{
@@ -67,6 +69,30 @@ justify-content: flex-start;
 	font-size: 20px;
 	color: white;
 	opacity: 0.7;
+	animation-name: cTextAnimate;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	-webkit-animation-name:cTextAnimate;/*Safari 4.0-8.0* & chrome/
+	-webkit-animation-duration:2s/*Safari 4.0-8.0* & chrome/
+	-webkit-animation-iteration-count:infinite;/*Safari 4.0-8.0* & chrome/
+	-moz-animation-name:cTextAnimate;/*Mozilla*/
+	-moz-animation-duration:2s;/*Mozilla*/
+	-moz-animation-iteration-count:infinite;/*Mozilla*/
+
+}
+/*Safari 4.0-8.0 & chrome*/
+@webkit-keyframes cTextAnimate{
+	from {color: white;}
+	to{color: #F3E96B;}
+}
+/*mozilla browser*/
+@moz-keyframes cTextAnimate{
+	from {color: white;}
+	to{color: #F3E96B;}
+}
+@keyframes cTextAnimate{
+	from {color: white;}
+	to{color: #F3E96B;}
 }
 .first{
 	background:gray;
@@ -247,7 +273,7 @@ h3{
 h4{
 	font-family: fantasy;
 	font-size: 30px;
-	background: #204141;
+	background: gray;
 	opacity: 1;
 	width: 100%;
 	color:white;
@@ -255,14 +281,26 @@ h4{
 	margin-left: 5px;
 	text-align: center;
 	justify-content: center;
-	transition: width 2s;
+	animation-name: animate;
+	animation-duration: 2s;
+	position: relative;
+	animation-iteration-count:infinite;
 }
 h4:hover{
 	opacity: 0.5;
-	width:50%;
-	justify-content: center;
-	margin-left: 25%;
-	margin-right: 25%;
+}
+@webkit-keyframes animate{ /*Safari 4.0-8.0 & chrome*/
+	from{background-color:gray ;}
+	to{background-color: #204141;}
+}
+/*mozilla browser*/
+@moz-keyframes animate{
+	from {background-color:gray ;}
+	to{background-color: #204141;}
+}
+@keyframes animate{
+	from {background-color:gray ;}
+	to{background-color: #204141;}
 }
 
 .cv_section{
@@ -502,7 +540,7 @@ border-color: black;
 }
 .label{
 	clear: both;
-}
+}      					/*https://www.w3schools.com/howto/howto_css_responsive_form.asp**/
 .sbt{
 	float: right;
 	background: #ddd;
@@ -601,8 +639,13 @@ margin:10px;
 	width: 100%;
 }
 
-
 /*social css till here*/
+
+
+/*css for modal_GP from here*/
+
+
+
 /*mobile responsiveness from here*/
 /*for screen size smaller than 480px(SMARTPHONES)*/
 @media only screen and (max-width: 480px){
@@ -785,7 +828,7 @@ h5{
 }
 .social_section{
 	width: 100%;
-	max-height: 700px;
+	height: 100%;
 }
 .sec_social{
 	display: flex;
@@ -977,14 +1020,14 @@ margin-bottom: 15px;
 }
 /*css for medium devices(tablets, 1020px and up)*/
 
-@media only screen and (max-width:1020px){
+@media only screen and (min-width: 480px) and (max-width:1020px){
 body{
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 	}
 	header{
-	font-size: 15px;
+	font-size: 19px;
 	font-family: fantasy;
 	padding-left: 20px;
 }
@@ -1103,7 +1146,7 @@ h5{
 }
 .social_section{
 	width: 100%;
-	max-height: 700px;
+	height: 100%;
 }
 .sec_social{
 	display: flex;
