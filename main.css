@@ -35,7 +35,7 @@ nav ul li a:hover{
 	flex-direction: row;
 	justify-content: flex-start;
 	width: 100%;
-	height: 100%;
+	height: 450px;
 }
 .section_image{
 	margin-left: 20%;
@@ -643,7 +643,69 @@ margin:10px;
 
 
 /*css for modal_GP from here*/
-
+.modal_body{
+	background: white;
+	background-repeat: no-repeat;
+	font-size: 20px;
+}
+.modal_header{
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+	background: #88899a;
+}
+.table_header{
+	font-size: 23px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+table{
+	font-family: tahoma,sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	border-spacing: 15px;
+}
+td,th{
+	border: 1px solid #cccccc;
+	text-align:center;
+	padding: 10px;
+}
+.content_li ul li{
+	list-style: none;
+	padding: 5px;
+}
+tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro*/
+    background-color: #dddddd;
+}
+/*modal introduction part*/
+.modal_intro{
+	width: 100%;
+	max-height: 200px;
+	text-align: left;
+	padding-top: 15px;
+	padding-left: 25px;
+}
+.intro_header,.UI_text{
+	font-weight: bold;
+	font-size: 23px;
+	background:#88899a;
+	width: 100%;
+	border-radius: 3px;
+}
+.UI_design{
+	padding-left: 25px;
+	padding-top: 15px;
+}
+.modal_img{
+	display: flex;
+	flex-direction: row;
+}
+.mainJpg,.MobJpg{
+	width: 100%;
+	height: 100%;
+	padding:10px;
+}
 
 
 /*mobile responsiveness from here*/
@@ -669,68 +731,66 @@ nav ul li{
 }
 .main_section{
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: column;
 	width: 100%;
-	margin-top: 40px;
+	height: 100%;
 }
 .section_image{
-	margin-top: 50px;
-	margin-left: 2%;
+	margin-left: 20%;
 }
 .pp{
-	width: 180px;
-	height: 180px;
+	width: 280px;
+	height: 280px;
 	border-radius: 50%;
 }
 .txt{
-	font-size: 2em;
+	font-size: 3em;
 	font-family: fantasy;
 }
 .first{
-	width: 50px;
-	height:50px;
+	width: 100px;
+	height:100px;
 	border:1px solid black;
 	border-radius: 50%;
 	margin-left: 5px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 100px;
 	font-size: 10px;
 	color: white;
 	opacity: 0.7;
 }
 .second{
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	border:1px solid black;
 	border-radius: 50%;
 	margin-left: 5px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 100px;
 	font-size: 10px;
 	color: white;
 	opacity: 0.7;
 }
 .third{
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	border:1px solid black;
 	border-radius: 50%;
 	margin-left: 5px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 100px;
 	font-size: 10px;
 	color: white;
 	opacity: 0.7;
 }
 .fourth{
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	border:1px solid black;
 	border-radius: 50%;
 	margin-left: 5px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 100px;
 	font-size: 10px;
 	color: white;
 	opacity: 0.7;
@@ -1041,7 +1101,7 @@ nav ul li{
 }
 .main_section{
 	width: 100%;
-	height: 350px;
+	height: 450px;
 	margin-top: 20px;
 }
 .section_image{
