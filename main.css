@@ -353,14 +353,18 @@ color: #a1b34a;
 	background: #204141;
 	opacity: 0.5;
 	margin-left: 185px;
+	transition: width 2s;
 }
 .v_work:hover{
 	opacity: 1;
+	border-radius: 10px;
+	width: 150px;
 }
 .v_define{
 	font-size: 15px;
 	margin-left: 25px;
 	width: 30%;
+	margin-bottom: 10px;
 }
 .cv_skills{
 	display: flex;
@@ -384,9 +388,13 @@ color: #a1b34a;
 	background: #204141;
 	opacity: 0.5;
 	margin-top: 10px;
+	transition: width 2s;
 }
+
 .tech_text:hover{
 	opacity: 1;
+	border-radius: 10px;
+	width: 150px;
 }
 .tech_list ul li{
 	list-style: none;
@@ -425,15 +433,23 @@ color: #a1b34a;
 	background: #204141;
 	opacity: 0.5;
 	margin-bottom: 10px;
+	transition: width 2s;
 }
 .lang_text:hover{
 	opacity: 1;
+	width:150px;
+	font-size: 17px;
+	border-radius: 10px;
 }
 .J,.H,.C{
 	width: 100px;
 	border:2px solid #ab6;
 	border-radius: 5px;
 	text-align: center;
+	transition: width 2s;
+}
+.J:hover,.H:hover,.C:hover{
+	width: 200%;
 }
 .Nep,.Tib,.Eng,.Hin{
 	width: 100px;
@@ -441,6 +457,10 @@ color: #a1b34a;
 	border-radius: 5px;
 	text-align: center;
 	margin-bottom: 10px;
+	transition: width 2s;
+}
+.Nep:hover,.Tib:hover,.Eng:hover,.Hin:hover{
+	width: 200%;
 }
 .education{
 	margin-top: 5px;
@@ -687,14 +707,14 @@ tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtm
 	padding-top: 15px;
 	padding-left: 25px;
 }
-.intro_header,.UI_text{
+.intro_header,.UI_text,.exp_modal,.imp_model{
 	font-weight: bold;
 	font-size: 23px;
 	background:#88899a;
 	width: 100%;
 	border-radius: 3px;
 }
-.UI_design{
+.UI_design,.modal_experience,.modal_implement{
 	padding-left: 25px;
 	padding-top: 15px;
 }
@@ -899,11 +919,11 @@ h5{
 
 .sec_facebook{
 border:none;
-height: 80px;
+height: 100%;
 text-align: center;
 margin: 10px;
-
 }
+
 .sec_gmail{
 border: none;
 height: 80px;
