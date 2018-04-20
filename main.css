@@ -548,7 +548,7 @@ input:hover{
 border-color: black; 
 }
 
-.lbl{					/*https://www.w3schools.com/howto/howto_css_responsive_form.asp*/
+.lbl{					
 	float: left;
 	width: 25%;
 	margin-top: 20px;
@@ -560,7 +560,7 @@ border-color: black;
 }
 .label{
 	clear: both;
-}      					/*https://www.w3schools.com/howto/howto_css_responsive_form.asp**/
+}      					
 .sbt{
 	float: right;
 	background: #ddd;
@@ -595,7 +595,7 @@ h5{
 }
 .social_section{
 	width: 100%;
-	height: 100%;
+	height: 450px;
 }
 .sec_social{
 	display: flex;
