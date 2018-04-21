@@ -72,23 +72,6 @@ justify-content: flex-start;
 	animation-name: cTextAnimate;
 	animation-duration:2s;
 	animation-iteration-count: infinite;
-	-webkit-animation-name:cTextAnimate;/*Safari 4.0-8.0 & chrome*/
-	-webkit-animation-duration:2s/*Safari 4.0-8.0* & chrome*/
-	-webkit-animation-iteration-count:infinite;/*Safari 4.0-8.0* & chrome*/
-	-moz-animation-name:cTextAnimate;/*Mozilla*/
-	-moz-animation-duration:2s;/*Mozilla*/
-	-moz-animation-iteration-count:infinite;/*Mozilla*/
-
-}
-/*Safari 4.0-8.0 & chrome*/
-@webkit-keyframes cTextAnimate{
-	from {color: white;}
-	to{color: #F3E96B;}
-}
-/*mozilla browser*/
-@moz-keyframes cTextAnimate{
-	from {color: white;}
-	to{color: #F3E96B;}
 }
 @keyframes cTextAnimate{
 	from {color: white;}
@@ -200,14 +183,17 @@ h3{
 .abt_section{
 	display: flex;
 	flex-direction: column;
-	max-height:700px; 
+	max-height:100%; 
 }
 .about_section{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	max-height: 700px;
+	height: 100%;
+}
+.abtlist_container{
+	margin: 0px;
 }
 .sectAbt_text{
 	width: 100%;
@@ -232,10 +218,13 @@ h3{
 }
 .about_list{
 	padding-right: 5px;
-	margin-top: 50px;
+	margin-top: 20px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+.abtlistfirst{
+	padding-left: 325px;
 }
 .abt_list li{
 	display: block;
@@ -279,24 +268,15 @@ h4{
 	color:white;
 	border-radius: 10px 10px 10px 10px;
 	margin-left: 5px;
+	margin-right: 5px;
 	text-align: center;
 	justify-content: center;
 	animation-name: animate;
 	animation-duration: 2s;
-	position: relative;
 	animation-iteration-count:infinite;
 }
 h4:hover{
 	opacity: 0.5;
-}
-@webkit-keyframes animate{ /*Safari 4.0-8.0 & chrome*/
-	from{background-color:gray ;}
-	to{background-color: #204141;}
-}
-/*mozilla browser*/
-@moz-keyframes animate{
-	from {background-color:gray ;}
-	to{background-color: #204141;}
 }
 @keyframes animate{
 	from {background-color:gray ;}
@@ -438,7 +418,7 @@ color: #a1b34a;
 .lang_text:hover{
 	opacity: 1;
 	width:150px;
-	font-size: 17px;
+	font-size: 10px;
 	border-radius: 10px;
 }
 .J,.H,.C{
@@ -707,14 +687,14 @@ tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtm
 	padding-top: 15px;
 	padding-left: 25px;
 }
-.intro_header,.UI_text,.exp_modal,.imp_model,.mockup_text{
+.intro_header,.UI_text,.exp_modal,.imp_model,.mockup_text,.refer_model,.valid_model{
 	font-weight: bold;
 	font-size: 23px;
 	background:#88899a;
 	width: 100%;
 	border-radius: 3px;
 }
-.UI_design,.modal_experience,.modal_implement,.modal_wireframe{
+.UI_design,.modal_experience,.modal_implement,.modal_wireframe,.modal_reference,.model_validate{
 	padding-left: 25px;
 	padding-top: 15px;
 }
@@ -738,6 +718,9 @@ tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtm
 .wiree{
 	display: flex;
 	flex-direction: column;
+}
+.ref_list ol li{
+padding:8px;
 }
 
 
@@ -769,7 +752,7 @@ nav ul li{
 	height: 100%;
 }
 .section_image{
-	margin-left: 20%;
+	margin-left: 12%;
 }
 .pp{
 	width: 280px;
@@ -867,6 +850,7 @@ display: inline-block;
 
 .mapForm_section{
 	width: 100%; 
+	height: 480px;
 }
 .form_section{
 	width: 50%;
@@ -1009,21 +993,31 @@ h4{
 	margin-left: 10px;
 	width: 100%;
 }
-.WE,.ski{
+.WE,.edu{
 	margin-top: 5px;
-	padding-left: 10px;
+	margin-left: 10px;
 	font-size: 20px;
 	font-weight: bold;
 	color: white;
 	text-align: center;
+}
+.ski{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	margin-left: 10px;
 }
 .v_work{
 	margin-left: 5px;
 
 }
 .tech_text{
-margin-left: 15px;
-margin-bottom: 15px;
+margin-left: 5px;
+margin-top: 0;
+}
+.tech_text:hover{
+	border-radius: 10px;
+	width: 120px;
 }
 
 .tech_list ul li{
@@ -1043,29 +1037,37 @@ margin-bottom: 15px;
 	width: 100%;
 	padding:5px;
 }
-.ski{
-	text-align: center;
-}
 
 .tech_skill,.lang_skill{
 	display: flex;
 	flex-direction: column;
-	padding-top: 15px;
+	padding-top: 1px;
+}
+.J:hover,.H:hover,.C:hover{
+	width: 120%;
 }
 .tech_skill{
 	margin-left: 0px;
 }
 .lang_skill{
 	margin-top: 5px;
+	padding-right: 50px;
+}
+.lang_text:hover{
+	width: 120px;
+}
+.lang_list ul li{
+	padding-top: 1px;
 }
 
 .Nep,.Tib,.Eng,.Hin{
-	margin-bottom: 7px;
-	margin-right: 5px;
+	margin-bottom: 1px;
+	margin-right: 1px;
 }
-.lang_skill{
-	margin-top: 10px;
-	margin-right: 50px;
+.Nep:hover,.Tib:hover,.Eng:hover,.Hin:hover{
+	margin-bottom: 1px;
+	margin-right: 1px;
+	width: 120%;
 }
 .education{
 	margin-top: 5px;
@@ -1075,6 +1077,25 @@ margin-bottom: 15px;
 	height: 100%;
 	border-radius: 5px;
 }
+.s_no,.date_no,.edu_course,.edu_school{
+	padding: 0;
+}
+.s_no ul li,.date_no ul li,.edu_course ul li,.edu_school ul li{
+	padding:8px;
+}
+.edu_course ul li .four{
+	padding-top: 15px;
+}
+.edu_course ul li .three{
+	padding-top: 10px;
+}
+.date_no ul li .four{
+	padding-top: 17px;
+}
+.s_no ul li{
+	padding-top: 18px;
+}
+
 
 /*About page css for samller screen from here*/
 
@@ -1087,23 +1108,25 @@ margin-bottom: 15px;
 }
 .sectAbt_text{
 	width: 100%;
-	margin-left: 2px; 
+	margin-left: 0;
 }
 .abt_text{
-	font-family: tahoma;
 	font-size: 15px;
 	width: 100%;
 }
 .abt_section{
-	max-height:2000px; 
+	max-height:1000px; 
 }
 .about_list{
 	margin-left: 0px;
-	padding-right: 5px;
+	padding-right: 0;
 	margin-top: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+.abtlistfirst{
+	padding-left: 5px;
 }
 .aspiration{
 	font-size: 15px;
@@ -1134,12 +1157,12 @@ nav ul li{
 }
 .main_section{
 	width: 100%;
-	height: 450px;
-	margin-top: 20px;
+	max-height: 1000px;
+	margin-top: 50px;
 }
 .section_image{
 	margin-top: 30px;
-	margin-left: 2%;
+	margin-left: 0;
 }
 .section_text{
 	width: 100%;
@@ -1186,11 +1209,14 @@ nav ul li{
 #contact{
 	margin-left: 15px;
 }
-/*contact page smaller screen css*/
+/*contact page medium screen css*/
 
-
+.ct_mainSection{
+	max-height: 800px;
+}
 .mapForm_section{
 	width: 100%; 
+	padding-top: 50px;
 }
 .form_section{
 	width: 50%;
@@ -1232,14 +1258,14 @@ iframe{
 }
 
 
-/*Social page smaller screen css from here*/
+/*Social page medium screen css from here*/
 
 h5{
 	font-size: 2em;
 }
 .social_section{
 	width: 100%;
-	height: 550px;
+	height: 100%;
 }
 .sec_social{
 	display: flex;
@@ -1371,6 +1397,7 @@ margin-bottom: 45px;
 .Nep,.Tib,.Eng,.Hin{
 	margin-bottom: 7px;
 	margin-right: 5px;
+
 }
 .lang_skill{
 	margin-top: 10px;
@@ -1385,7 +1412,7 @@ margin-bottom: 45px;
 	border-radius: 5px;
 }
 
-/*About page css for samller screen from here*/
+/*About page css for medium screen from here*/
 
 .pp1{
 	width: 150px;
@@ -1417,6 +1444,9 @@ margin-bottom: 45px;
 .aspiration{
 	font-size: 15px;
 	margin-left: 5px;
+}
+.abtlistfirst{
+	padding-left: 180px;
 }
 
 
