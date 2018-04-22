@@ -679,7 +679,7 @@ td,th{
 	list-style: none;
 	padding: 5px;
 }
-tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro*/
+tr:nth-child(even) { 
     background-color: #dddddd;
 }
 /*modal introduction part*/
@@ -721,6 +721,10 @@ tr:nth-child(even) {  /*https://www.w3schools.com/html/tryit.asp?filename=tryhtm
 .wiree{
 	display: flex;
 	flex-direction: column;
+}
+.sc{
+	font-weight: bold;
+	font-size: 20px;
 }
 .ref_list ol li{
 padding:8px;
